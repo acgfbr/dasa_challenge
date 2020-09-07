@@ -69,7 +69,7 @@ Exame
 # Funcionalidades extras
 -  [ ] Possibilidade de executar cadastro, atualização e remoção em lote (não o fiz por preguiça/falta de tempo);
 
--  [x] Endpoint que faz a busca por nome do exame e retorna todos os laboratorios associados a esse exame.
+-  [ ] Endpoint que faz a busca por nome do exame e retorna todos os laboratorios associados a esse exame.
 
 
 # Diferenciais
