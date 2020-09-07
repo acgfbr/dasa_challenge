@@ -1,4 +1,4 @@
-const examDb = require('../../data-access/exam-db')
+const examDb = require('../../../data-access/laboratory-db')
 
 const exam = module.exports = {}
 

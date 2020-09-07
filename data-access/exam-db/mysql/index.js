@@ -2,6 +2,7 @@ const db = require('../../../db/mysql/index')
 const makeExam = require('../../../models/exam/index') 
 const serialize = require('./serializer') 
 const sequelize = require('sequelize')
+const buildMakeExam = require('../../../models/exam/exam')
 
 let listExam = async (page) => {
  
@@ -17,9 +18,19 @@ let listExam = async (page) => {
   
 }
 
-let addExam = async(name,exam_type)=>{
-  const exam = await db.exams.create({name,exam_type,status:'ativo', created_at: new Date(), updated_at: new Date()});
-  return { exam:  exam};
+let addExam = async(examValidator)=>{
+  
+  let exam = makeExam(examValidator);
+
+  let newExam = {
+    name: exam.getName(),
+    exam_type: exam.getExamType(),
+    status: exam.getStatus(),
+    created_at: exam.getCreatedAt(),
+    updated_at: exam.getUpdatedAt(),
+  }
+  const examCreated = await db.exams.create(newExam);
+  return { exam:  examCreated};
 }
 
 let updateExam = async(id,name,exam_type,status)=>{

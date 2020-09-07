@@ -1,6 +1,5 @@
 const {
     listExam,
-    findExam,
     addExam,
     updateExam,
     deleteExam,
@@ -13,10 +12,6 @@ const {
     addExam,
     updateExam,
     deleteExam
-    /*findExam,
-    addExam,
-    updateExam,
-    deleteExam,*/
   }
   
   module.exports = examDb
