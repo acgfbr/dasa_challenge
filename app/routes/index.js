@@ -8,6 +8,10 @@ const labRoutes = require('./laboratory')
 router.use(examRoutes)
 router.use(labRoutes)
 
+router.get('/',(req,res,next) => {
+    res.send({ message: 'hello dasa, ME CONTRATA :)' });
+})
+
 /*
 
 */
