@@ -64,6 +64,13 @@ Exame
 
 -  [ ] Endpoint que faz a busca por nome do exame e retorna todos os laboratorios associados a esse exame.
 
+
+# Diferenciais
+-   [x] Publicação do ambiente em um serviço cloud de hospedagens (Heroku, AWS, GCP, etc) - https://dasa-challenge.herokuapp.com/
+-   [x] Configurar a aplicação para rodar em um container - docker-compose.yml e Dockerfile configurados
+-   [x] Documentação da API - https://documenter.getpostman.com/view/2492835/TVCiUScQ
+
+
 <hr>
 
 -   Arquitetura utilizada: Clean Architecture ( tentei, não domino )
@@ -76,9 +83,3 @@ Exame
 -   yarn start - Inicia o script
 
 -   Link vídeo funcionando: em breve
-
-# Diferenciais
--   [x] Publicação do ambiente em um serviço cloud de hospedagens (Heroku, AWS, GCP, etc) - https://dasa-challenge.herokuapp.com/
--   [x] Configurar a aplicação para rodar em um container - docker-compose.yml e Dockerfile configurados
--   [x] Documentação da API - https://documenter.getpostman.com/view/2492835/TVCiUScQ
-
