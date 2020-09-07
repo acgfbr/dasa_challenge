@@ -66,7 +66,7 @@ Exame
 
 <hr>
 
--   Foi publicado no heroku no endpoint: em breve
+-   Foi publicado no heroku no endpoint: https://dasa-challenge.herokuapp.com/
 
 -   Arquitetura utilizada: Clean Architecture ( tentei, não domino )
 

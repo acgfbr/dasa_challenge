@@ -14,9 +14,15 @@ var authMiddleware = function (req, res, next) {
   }
   next()
 };
-app.use(authMiddleware);
 
 app.use(bodyParser.json());
+
+app.get('/',(req,res,next) => {
+  res.send({ message: 'hello dasa, ME CONTRATA :)' });
+})
+
+app.use(authMiddleware);
+
 app.use('/api/v1',routes)
 
 
