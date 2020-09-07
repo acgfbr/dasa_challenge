@@ -90,4 +90,4 @@ Exame
 -   sequelize-cli db:migrate - Roda as migrations pra popular o banco
 -   yarn start - Inicia o script
 
--   Link vídeo funcionando: em breve
+-   Link vídeo funcionando: https://www.youtube.com/watch?v=pw1JLTJbsCU
