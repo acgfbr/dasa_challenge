@@ -11,6 +11,8 @@ const {
    const examDb = {
     listExam,
     addExam,
+    updateExam,
+    deleteExam
     /*findExam,
     addExam,
     updateExam,

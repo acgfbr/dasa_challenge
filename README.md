@@ -32,8 +32,8 @@ Exames:
 
 -  [x] cadastrar um novo exame;
 -  [x] obter uma lista de exames ativos;
--  [ ] atualizar um exame existente;
--  [ ] remover logicamente um exame ativo.
+-  [x] atualizar um exame existente;
+-  [x] remover logicamente um exame ativo.
 
 Associação:
 

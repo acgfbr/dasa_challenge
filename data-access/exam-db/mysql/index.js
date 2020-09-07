@@ -22,8 +22,26 @@ let addExam = async(name,exam_type,status)=>{
   return { exam:  exam};
 }
 
+let updateExam = async(id,name,exam_type,status)=>{
+  console.log(name);
+  let exam = await db.exams.findAll({where: {id:id}});
+  
+  if(exam){
+    await db.exams.update({name:name, exam_type: exam_type, status:status},{where: {id:id}});
+  }
+  return { exam: await db.exams.findAll({where: {id:id}}) };
+}
+
+
+let deleteExam = async(id,name,exam_type,status)=>{
+  await db.exams.destroy({where: {id:id}});
+  return { message: 'deleted succesfully' };
+}
+
 module.exports = {
     listExam,
-    addExam
+    addExam,
+    updateExam,
+    deleteExam
 }
 
