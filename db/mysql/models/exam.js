@@ -3,7 +3,7 @@ const sequelizePaginate = require('sequelize-paginate')
 
 module.exports = (sequelize, DataTypes) => {
   const exam = sequelize.define('exams', {
-    id: { type: DataTypes.INTEGER, primaryKey:true},
+    id: { type: DataTypes.INTEGER, primaryKey:true,autoIncrement: true},
     name: DataTypes.STRING,
     exam_type: DataTypes.STRING,
     status: DataTypes.STRING,

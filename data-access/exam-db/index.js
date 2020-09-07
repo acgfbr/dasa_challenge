@@ -10,6 +10,7 @@ const {
   
    const examDb = {
     listExam,
+    addExam,
     /*findExam,
     addExam,
     updateExam,

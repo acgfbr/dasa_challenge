@@ -9,33 +9,21 @@ let listExam = async (page) => {
     attributes: ['id', 'name', 'exam_type','status','created_at','updated_at'],
     page: page,
     paginate: 25, 
-    order: [['id', 'ASC']]
+    order: [['id', 'ASC']],
+    where: { status:  'ativo'  }
   }
   const { docs, pages, total } = await db.exams.paginate(options)
   return {exams:docs, pages, total}
   
 }
 
-/*
-
-  const options = {
-    attributes: ['id', 'name', 'exam_type','status','created_at','updated_at'],
-    page: 1, // Default 1
-    paginate: 25, // Default 25
-    order: [['id', 'ASC']]
-  }
-  const { docs, pages, total } = db.exams.paginate(options)
-  return {
-    docs: docs,
-    pages: pages,
-    total: total
-  }
-*/
-
-
+let addExam = async(name,exam_type,status)=>{
+  const exam = await db.exams.create({name,exam_type,status, created_at: new Date(), updated_at: new Date()});
+  return { exam:  exam};
+}
 
 module.exports = {
     listExam,
-   
+    addExam
 }
 
