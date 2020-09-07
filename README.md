@@ -62,20 +62,23 @@ Exame
 # Funcionalidades extras
 -  [ ] Possibilidade de executar cadastro, atualização e remoção em lote (não o fiz por preguiça/falta de tempo);
 
--  [x] Endpoint que faz a busca por nome do exame e retorna todos os laboratorios associados a esse exame.
+-  [ ] Endpoint que faz a busca por nome do exame e retorna todos os laboratorios associados a esse exame.
 
 <hr>
-
--   Foi publicado no heroku no endpoint: https://dasa-challenge.herokuapp.com/
 
 -   Arquitetura utilizada: Clean Architecture ( tentei, não domino )
 
 -   Desafio iniciado em: 06/09/2020 21:00
 -   Desafio finalizado em: ainda não finalizado
+
 -   Utilizei token fixo para autorização mas poderia ter utilizado jwt, não usei jwt por preguiça/falta de tempo;
 -   sequelize-cli db:migrate - Roda as migrations pra popular o banco
 -   yarn start - Inicia o script
--   Link doc postman: em breve
 
 -   Link vídeo funcionando: em breve
+
+# Diferenciais
+-   [x] Publicação do ambiente em um serviço cloud de hospedagens (Heroku, AWS, GCP, etc) - https://dasa-challenge.herokuapp.com/
+-   [x] Configurar a aplicação para rodar em um container - docker-compose.yml e Dockerfile configurados
+-   [x] Documentação da API - https://documenter.getpostman.com/view/2492835/TVCiUScQ
 
