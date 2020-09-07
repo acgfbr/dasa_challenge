@@ -59,7 +59,9 @@ Exame
 -   status [ativo, inativo]
 
 # Funcionalidades extras
--  [ ] Possibilidade de executar cadastro, atualização e remoção em lote;
+-  [ ] Possibilidade de executar cadastro, atualização e remoção em lote 
+    ps: ( poderia ter usado background jobs para não travar a requisição, mas não o fiz por preguiça/falta de tempo);
+
 -  [ ] Endpoint que faz a busca por nome do exame e retorna todos os laboratorios associados a esse exame.
 
 <hr>
@@ -70,8 +72,10 @@ Exame
 
 -   Desafio iniciado em: 06/09/2020 21:00
 -   Desafio finalizado em: ainda não finalizado
-
-
+-   Utilizei token fixo para autorização mas poderia ter utilizado jwt, não usei jwt por preguiça/falta de tempo;
+-   sequelize-cli db:migrate - Roda as migrations pra popular o banco
+-   yarn start - Inicia o script
 -   Link doc postman: em breve
 
 -   Link vídeo funcionando: em breve
+
