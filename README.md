@@ -60,10 +60,9 @@ Exame
 -   status [ativo, inativo]
 
 # Funcionalidades extras
--  [ ] Possibilidade de executar cadastro, atualização e remoção em lote 
-    ps: ( poderia ter usado background jobs para não travar a requisição, mas não o fiz por preguiça/falta de tempo);
+-  [ ] Possibilidade de executar cadastro, atualização e remoção em lote (não o fiz por preguiça/falta de tempo);
 
--  [ ] Endpoint que faz a busca por nome do exame e retorna todos os laboratorios associados a esse exame.
+-  [x] Endpoint que faz a busca por nome do exame e retorna todos os laboratorios associados a esse exame.
 
 <hr>
 
