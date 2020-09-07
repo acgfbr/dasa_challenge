@@ -17,8 +17,8 @@ let listExam = async (page) => {
   
 }
 
-let addExam = async(name,exam_type,status)=>{
-  const exam = await db.exams.create({name,exam_type,status, created_at: new Date(), updated_at: new Date()});
+let addExam = async(name,exam_type)=>{
+  const exam = await db.exams.create({name,exam_type,status:'ativo', created_at: new Date(), updated_at: new Date()});
   return { exam:  exam};
 }
 

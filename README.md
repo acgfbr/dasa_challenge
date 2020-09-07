@@ -39,10 +39,11 @@ Associação:
 
 -  [ ] associar um exame ativo à um laboratório ativo;
 -  [ ] desassociar um exame ativo de um laboratório ativo;
+
 Importante:
 
 -  [ ] Um exame pode estar associado a mais de um laboratório;
--  [ ] O cadastro de um laboratório/exame é considerado ativo e recebe um id gerado automaticamente.
+-  [x] O cadastro de um laboratório/exame é considerado ativo e recebe um id gerado automaticamente.
 
 # Informações de dados
 

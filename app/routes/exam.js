@@ -9,8 +9,8 @@ exam.list = async(req, res, next) => {
 }
 
 exam.add = async(req, res, next) => {
-  const {name,exam_type,status} = req.body;
-  const response = await examDb.addExam(name,exam_type,status)
+  const {name,exam_type} = req.body;
+  const response = await examDb.addExam(name,exam_type)
   res.send(response)
 }
 
