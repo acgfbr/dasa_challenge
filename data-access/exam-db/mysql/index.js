@@ -34,7 +34,6 @@ let addExam = async(examValidator)=>{
 }
 
 let updateExam = async(id,name,exam_type,status)=>{
-  console.log(name);
   let exam = await db.exams.findAll({where: {id:id}});
   
   if(exam){
@@ -44,7 +43,7 @@ let updateExam = async(id,name,exam_type,status)=>{
 }
 
 
-let deleteExam = async(id,name,exam_type,status)=>{
+let deleteExam = async(id)=>{
   await db.exams.destroy({where: {id:id}});
   return { message: 'deleted succesfully' };
 }

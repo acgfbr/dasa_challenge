@@ -1,4 +1,5 @@
 'use strict';
+const sequelizePaginate = require('sequelize-paginate')
 module.exports = (sequelize, DataTypes) => {
   const laboratory = sequelize.define('laboratorys', {
     id: { type: DataTypes.INTEGER, primaryKey:true,autoIncrement: true},
@@ -10,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
   },{
     timestamps: false
 });
+
+sequelizePaginate.paginate(laboratory)
   
   return laboratory;
 };

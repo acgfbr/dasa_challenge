@@ -1,30 +1,29 @@
-const examDb = require('../../../data-access/laboratory-db')
+const labDb = require('../../../data-access/laboratory-db')
 
-const exam = module.exports = {}
+const lab = module.exports = {}
 
-exam.list = async(req, res, next) => {
+lab.list = async(req, res, next) => {
     const page = req.query.page || 1;
-    const response = await examDb.listExam(page)
+    const response = await labDb.listLaboratory(page)
     res.send(response)
 }
 
-exam.add = async(req, res, next) => {
-  const {name,exam_type} = req.body;
-  const response = await examDb.addExam(name,exam_type)
+lab.add = async(req, res, next) => {
+  const response = await labDb.addLaboratory(req.body).catch((err) => { res.send({error: err.message})})
   res.send(response)
 }
 
-exam.update = async(req, res, next) => {
-  const exam_id = req.params.exam_id;
-  const {name,exam_type,status} = req.body;
-  const response = await examDb.updateExam(exam_id,name,exam_type,status)
+lab.update = async(req, res, next) => {
+  const laboratory_id = req.params.laboratory_id;
+  const {name,address,status} = req.body;
+  const response = await labDb.updateLaboratory(laboratory_id,name,address,status)
   res.send(response)
 }
 
 
-exam.delete = async(req, res, next) => {
-  const exam_id = req.params.exam_id;
+lab.delete = async(req, res, next) => {
+  const laboratory_id = req.params.laboratory_id;
   
-  const response = await examDb.deleteExam(exam_id)
+  const response = await labDb.deleteLaboratory(laboratory_id)
   res.send(response)
 }

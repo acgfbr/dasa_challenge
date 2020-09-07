@@ -23,10 +23,10 @@ Criar uma api com os seguintes endpoints:
 
 Laboratório:
 
--  [ ] cadastrar um novo laborário;
--  [ ] obter uma lista de laboratórios ativos;
--  [ ] atualizar um laboratório existente;
--  [ ] remover logicamente um laboratório ativo.
+-  [x] cadastrar um novo laborário;
+-  [x] obter uma lista de laboratórios ativos;
+-  [x] atualizar um laboratório existente;
+-  [x] remover logicamente um laboratório ativo.
 
 Exames:
 

@@ -1,20 +1,17 @@
 let buildMakeLaboratory = function(laboratoryValidator) {
     return ({
         name,
-        address,
-        status,
-        created_at,
-        updated_at
+        address
     } = {}) => {
       
-        let {error} = laboratoryValidator({name, address, status})
+        let {error} = laboratoryValidator({name, address})
         if (error) throw new Error(error)
       return {
         getName: () => name,
         getAddress: () => address,
-        getStatus: () => status,
-        getCreatedAt: () => created_at,
-        getUpdatedAt: () => updated_at
+        getStatus: () => 'ativo',
+        getCreatedAt: () => new Date(),
+        getUpdatedAt: () => new Date()
       }
     }
   }
