@@ -14,7 +14,21 @@ let listExam = async (page) => {
     where: { status:  'ativo'  }
   }
   const { docs, pages, total } = await db.exams.paginate(options)
-  return {exams:docs, pages, total}
+
+
+  var obj2 = JSON.parse(JSON.stringify(docs));
+
+  for(let i = 0; i < obj2.length; i++){
+      const labExamObjs = await db.laboratorys_exams.findAll({where: { exam_id: obj2[i].id }});
+      const ids = labExamObjs.map((obj)=>{
+        return obj.laboratory_id;
+      })
+
+      const laboratorys = await db.laboratorys.findAll({where: {id:ids}})
+      obj2[i].laboratorys = laboratorys;
+  }
+
+  return {exams:obj2, pages, total}
   
 }
 

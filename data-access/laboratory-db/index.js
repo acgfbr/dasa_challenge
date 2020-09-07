@@ -3,6 +3,8 @@ const {
     addLaboratory,
     updateLaboratory,
     deleteLaboratory,
+    associate,
+    disassociate
   } 
    = require('./mysql/index')
   
@@ -11,7 +13,9 @@ const {
     listLaboratory,
     addLaboratory,
     updateLaboratory,
-    deleteLaboratory
+    deleteLaboratory,
+    associate,
+    disassociate
   }
   
   module.exports = laboratoryDb

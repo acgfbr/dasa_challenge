@@ -13,7 +13,20 @@ let listLaboratory = async (page) => {
     where: { status:  'ativo'  }
   }
   const { docs, pages, total } = await db.laboratorys.paginate(options)
-  return {laboratorys:docs, pages, total}
+  
+  var obj2 = JSON.parse(JSON.stringify(docs));
+
+  for(let i = 0; i < obj2.length; i++){
+      const labExamObjs = await db.laboratorys_exams.findAll({where: { laboratory_id: obj2[i].id }});
+      const ids = labExamObjs.map((obj)=>{
+        return obj.exam_id;
+      })
+
+      const exams = await db.exams.findAll({where: {id:ids}})
+      obj2[i].exams = exams;
+  }
+
+  return {laboratorys:obj2, pages, total}
   
 }
 
@@ -48,10 +61,23 @@ let deleteLaboratory = async(id)=>{
   return { message: 'deleted succesfully' };
 }
 
+
+let associate = async(laboratory_id,exam_id)=>{
+    await db.laboratorys_exams.create({ laboratory_id, exam_id, created_at: new Date(), updated_at: new Date() });
+    return { message: 'associate with success' };
+}
+
+let disassociate = async(laboratory_id,exam_id)=>{
+  await db.laboratorys_exams.destroy({ where:{laboratory_id:laboratory_id, exam_id:exam_id}});
+  return { message: 'disassociate with success' };
+}
+
 module.exports = {
     listLaboratory,
     addLaboratory,
     updateLaboratory,
-    deleteLaboratory
+    deleteLaboratory,
+    associate,
+    disassociate
 }
 

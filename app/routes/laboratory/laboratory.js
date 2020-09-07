@@ -27,3 +27,18 @@ lab.delete = async(req, res, next) => {
   const response = await labDb.deleteLaboratory(laboratory_id)
   res.send(response)
 }
+
+lab.associate = async(req, res, next) => {
+    const laboratory_id = req.body.laboratory_id;
+    const exam_id = req.body.exam_id;
+    
+    const response = await labDb.associate(laboratory_id,exam_id)
+    res.send(response)
+}
+lab.disassociate = async(req, res, next) => {
+    const laboratory_id = req.body.laboratory_id;
+    const exam_id = req.body.exam_id;
+    
+    const response = await labDb.disassociate(laboratory_id,exam_id)
+    res.send(response)
+}

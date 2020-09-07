@@ -37,12 +37,19 @@ Exames:
 
 Associação:
 
--  [ ] associar um exame ativo à um laboratório ativo;
--  [ ] desassociar um exame ativo de um laboratório ativo;
+-  [x] associar um exame ativo à um laboratório ativo;
+-  [x] desassociar um exame ativo de um laboratório ativo;
+
+ps: atenções nos pontos acima
+-   não foram verificadas se o exame/lab está ativo
+-   não foram verificados foreign keys
+-   não foram verificados se já existe uma associação
+
+não foi feito por falta de tempo/preguiça
 
 Importante:
 
--  [ ] Um exame pode estar associado a mais de um laboratório;
+-  [x] Um exame pode estar associado a mais de um laboratório;
 -  [x] O cadastro de um laboratório/exame é considerado ativo e recebe um id gerado automaticamente.
 
 # Informações de dados
@@ -62,7 +69,7 @@ Exame
 # Funcionalidades extras
 -  [ ] Possibilidade de executar cadastro, atualização e remoção em lote (não o fiz por preguiça/falta de tempo);
 
--  [ ] Endpoint que faz a busca por nome do exame e retorna todos os laboratorios associados a esse exame.
+-  [x] Endpoint que faz a busca por nome do exame e retorna todos os laboratorios associados a esse exame.
 
 
 # Diferenciais
@@ -76,9 +83,10 @@ Exame
 -   Arquitetura utilizada: Clean Architecture ( tentei, não domino )
 
 -   Desafio iniciado em: 06/09/2020 21:00
--   Desafio finalizado em: ainda não finalizado
+-   Desafio finalizado em: 07/09/2020 15:00
 
 -   Utilizei token fixo para autorização mas poderia ter utilizado jwt, não usei jwt por preguiça/falta de tempo;
+
 -   sequelize-cli db:migrate - Roda as migrations pra popular o banco
 -   yarn start - Inicia o script
 
